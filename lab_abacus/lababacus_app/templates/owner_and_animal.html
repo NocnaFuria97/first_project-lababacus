@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Owner and Animal</title>
+
+</head>
+
+<body>
+
+<a href="/home">Home</a>
+
+<h2> </h2>
+
+<h1>Owner: {{ owner.name }}</h1>
+
+  <h2>Animals:</h2>
+
+  <a href="/animal_and_test/{{ animal.id }}/">
+
+    {% for animal in animals %}
+
+        <a href="/animal_and_test/{{ animal.id }}/">
+
+      <p><strong>{{ animal.name_or_number }}</strong>
+
+    {% endfor %}
+
+  </a>
+
+</body>
+
+</html>

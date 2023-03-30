@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Blood delete</title>
+
+</head>
+
+<body>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+    <a href="/home">Home</a>
+
+    <h2> </h2>
+
+  <label for="name">Wynik badań krwi:</label>
+  <select name="blood_id">
+  {% for blood in bloods %}
+
+    <option value="{{ blood.id }}">{{ blood.added_date_blood }}</option>
+
+  {% endfor %}
+</select>
+  <input type="submit" value="Usuń">
+
+        <h2>Lista właścicieli:</h2>
+        <a href="/owners">Właściciele</a>
+
+        <h2>Nowa krew:</h2>
+        <a href="/add_lab_blood_test">Krew!</a>
+
+</form>
+
+
+</body>
+
+</html>

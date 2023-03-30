@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <title>Home</title>
+
+        <meta charset="utf-8">
+
+<style>
+div {
+width: auto;
+text-align: center;
+padding: 15px;
+border: 3px solid red;
+}
+img {
+max-width: 25%;
+height: auto;
+}
+</style>
+
+    </head>
+
+
+
+    <body>
+
+        <h1>Witaj w LabAbacus! Co dziś liczymy?</h1>
+
+        {% load static %}
+    <img src="{% static '/images/abacus1.jpg' %}" alt="Abacus1">
+
+        {% load static %}
+    <img src="{% static '/images/abacus2.jpg' %}" alt="Abacus2">
+
+
+        <h2> </h2>
+
+        <a href="/add_lab_blood_test">Krew!</a>
+
+        <h2> </h2>
+
+        <a href="/add_lab_nosema_test">Nosema!</a>
+
+        <h2>Nowy właściciel:</h2>
+        <a href="/add_owner">Dodaj właściciela</a>
+
+        <h2>Nowe zwierze:</h2>
+        <a href="/add_animal">Dodaj zwierze</a>
+
+        <h2>Lista właścicieli:</h2>
+        <a href="/owners">Właściciele</a>
+
+        <h2>Znajdz właściciela:</h2>
+        <a href="/find_owner">Szukaj właściciela</a>
+
+        <h2>Znajdz zwierze:</h2>
+        <a href="/find_animal">Szukaj zwierzęcia</a>
+
+        <h2>Usuwanie właściciela:</h2>
+        <a href="/delete_owner">Usuń właściciela</a>
+
+        <h2>Usuwanie zwierzecia:</h2>
+        <a href="/delete_animal">Usuń zwierze</a>
+
+        <h2>Usuwanie wyniku badań krwi:</h2>
+        <a href="/delete_blood">Usuń krew!</a>
+
+        <h2>Usuwanie wyniku badań nosema:</h2>
+        <a href="/delete_blood">Usuń Nosema!</a>
+
+        <h2>Wylogowanie:</h2>
+        <a href="/my_logout/">Wyloguj się</a>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Owner delete</title>
+
+</head>
+
+<body>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+    <a href="/home">Home</a>
+
+    <h2> </h2>
+
+  <label for="name">Nazwa:</label>
+  <select name="owner_id">
+  {% for owner in owners %}
+        
+    <option value="{{ owner.id }}">{{ owner.name }}</option>
+
+  {% endfor %}
+</select>
+  <input type="submit" value="Usuń">
+
+        <h2>Lista właścicieli:</h2>
+        <a href="/owners">Właściciele</a>
+
+        <h2>Nowy właściciel:</h2>
+        <a href="/add_owner">Dodaj właściciela</a>
+
+</form>
+
+
+</body>
+
+</html>

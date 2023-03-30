@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Animal delete</title>
+
+</head>
+
+<body>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+    <a href="/home">Home</a>
+
+    <h2> </h2>
+
+  <label for="name">Imię lub numer:</label>
+  <select name="animal_id">
+  {% for animal in animals %}
+
+    <option value="{{ animal.id }}">{{ animal.name_or_number }}</option>
+
+  {% endfor %}
+</select>
+  <input type="submit" value="Usuń">
+
+        <h2>Lista właścicieli:</h2>
+        <a href="/owners">Właściciele</a>
+
+        <h2>Nowe zwierze:</h2>
+        <a href="/add_animal">Dodaj zwierze</a>
+
+</form>
+
+
+</body>
+
+</html>

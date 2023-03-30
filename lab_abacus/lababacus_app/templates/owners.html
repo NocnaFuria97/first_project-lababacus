@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <title>Owners</title>
+
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+
+        <a href="/home">Home</a>
+
+        <h2> </h2>
+
+
+        <h1>Właściciele:</h1>
+
+        <a href="/owner_and_animal/{{ owner.id }}/">
+
+
+        {% for owner in owners %}
+
+
+        <a href="/owner_and_animal/{{ owner.id }}/">
+            <p><strong>{{ owner.name }}</strong>
+        </a>
+
+        {% endfor %}
+
+        </a>
+
+        <h2> </h2>
+
+        <a href="/add_owner">Dodaj właściciela</a>
+
+        <h2> </h2>
+
+        <a href="/find_owner">Szukaj właściciela</a>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Nosema delete</title>
+
+</head>
+
+<body>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+    <a href="/home">Home</a>
+
+    <h2> </h2>
+
+  <label for="name">Wynik badań Nosema:</label>
+  <select name="blood_id">
+  {% for nosema in nosemas %}
+
+    <option value="{{ nosema.id }}">{{ nosema.added_date_blood }}</option>
+
+  {% endfor %}
+</select>
+  <input type="submit" value="Usuń">
+
+        <h2>Lista właścicieli:</h2>
+        <a href="/owners">Właściciele</a>
+
+        <h2>Nowa Nosema:</h2>
+        <a href="/add_lab_nosema_test">Nosema!</a>
+
+</form>
+
+
+</body>
+
+</html>

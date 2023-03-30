@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Animal and Test</title>
+
+</head>
+
+<body>
+
+<a href="/home">Home</a>
+
+<h2> </h2>
+
+<h1>Zwierze: {{ animal.name_or_number }}</h1>
+
+  <h2>Testy Krew:</h2>
+
+  <ul>
+
+    {% for blood in bloods %}
+
+      <li>{{ blood.added_date_blood }} : Neutro Seg - {{ blood.no_neutro_seg }}, Neutro NonSeg - {{ blood.no_neutro_nonseg }}, Bazo - {{ blood.no_bazo }}, Eozyno - {{ blood.no_eozyno }}, Limfo - {{ blood.no_limfo }}, Mono - {{ blood.no_mono }}, Trombo - {{ blood.no_trombo }}</li>
+
+    {% endfor %}
+
+  </ul>
+  <h2>Testy Nosema:</h2>
+
+  <ul>
+
+    {% for nosema in nosemas %}
+
+      <li>{{ nosema.added_date_nosema }} : Nosema apis - {{ nosema.apis }}, Nosema cerane - {{ nosema.cerane }}</li>
+
+    {% endfor %}
+
+  </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Animal add</title>
+
+</head>
+
+<body>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+    <a href="/home">Home</a>
+
+    <h2> </h2>
+
+  <label for="name_or_number">Imię lub numer:</label>
+
+  <input type="text" id="name_or_number" name="name_or_number">
+
+  <label for="owner">Właściciel:</label>
+
+  <select name="owner_id">
+  {% for owner in owners %}
+
+    <option value="{{ owner.id }}">{{ owner.name }}</option>
+
+  {% endfor %}
+</select>
+
+
+  <input type="submit" value="Dodaj">
+
+    <h2> </h2>
+
+    <h2>Znajdz zwierze:</h2>
+    <a href="/find_animal">Szukaj zwierzęcia</a>
+
+    <h2>Lista właścicieli:</h2>
+    <a href="/owners">Właściciele</a>
+
+    <h2>Usuwanie zwierzecia:</h2>
+    <a href="/delete_animal">Usuń zwierze</a>
+
+</form>
+
+
+</body>
+
+</html>

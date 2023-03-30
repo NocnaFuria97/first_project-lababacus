@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Add Lab Blood Test</title>
+
+    <style>
+div {
+width: auto;
+text-align: center;
+padding: 15px;
+border: 3px solid red;
+}
+img {
+max-width: 25%;
+height: auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+    <a href="/home">Home</a>
+
+    <h2> </h2>
+
+    <h1>Liczymy Krew!</h1>
+
+
+    <h2> </h2>
+        {% load static %}
+    <img src="{% static '/images/blood.jpg' %}" alt="Blood">
+
+
+    <h2> </h2>
+
+      <label for="animal">Imię zwierzęcia:</label>
+
+  <select name="animal_id">
+  {% for animal in animals %}
+
+    <option value="{{ animal.id }}">{{ animal.name_or_number }}</option>
+
+  {% endfor %}
+</select>
+
+    <h2> </h2>
+
+  <label for="no_neutro_seg">Nutrofile segmentowane:</label>
+
+  <input type="number" id="no_neutro_seg" name="no_neutro_seg">
+
+    <h2> </h2>
+
+  <label for="no_neutro_non_seg">Nutrofile niesegmentowane:</label>
+
+  <input type="number" id="no_neutro_non_seg" name="no_neutro_non_seg">
+
+    <h2> </h2>
+
+  <label for="no_bazo">Bazofile:</label>
+
+  <input type="number" id="no_bazo" name="no_bazo">
+
+    <h2> </h2>
+
+  <label for="no_eozyno">Eozynofile:</label>
+
+  <input type="number" id="no_eozyno" name="no_eozyno">
+
+    <h2> </h2>
+
+  <label for="no_limfo">Limfocyty:</label>
+
+  <input type="number" id="no_limfo" name="no_limfo">
+
+    <h2> </h2>
+
+  <label for="no_mono">Monocyty:</label>
+
+  <input type="number" id="no_mono" name="no_mono">
+
+    <h2> </h2>
+
+  <label for="no_trombo">Trombocyty:</label>
+
+  <input type="number" id="no_trombo" name="no_trombo">
+
+    <h2> </h2>
+
+  <input type="submit" value="Dodaj">
+
+</form>
+
+
+</body>
+
+</html>
